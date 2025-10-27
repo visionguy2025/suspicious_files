@@ -1,0 +1,224 @@
+/* ▼ ======================== ↓ | CUSTOM VALUES | ↓ ======================== ▼ */
+:root {
+    --color_text_light: #888888;
+    --color_text_med: #444444;
+    --color_text_bold: #000000;
+    --color_text_50: #00000050;
+
+    --color_bg_light: #ffffff;
+    --color_bg_med: #a1a1a1;
+    --color_bg_bold: #000000;
+    --color_bg_50: #ffffff50;
+
+    --color_theme_light: #ff0000;
+    --color_theme_med: #bd2e2e;
+    --color_theme_bold: #691e1e;
+    --color_theme_50: #691e1e50;
+
+    --width_section_small: 1160px;
+    --width_section_full: 100%;
+    --width_section_center: min(var(--width_section_small), 98%);
+
+    --margin_center: 0 auto;
+
+    --padding_section_large: 100px 0;
+
+    --backdrop_filter: blur(20px);
+
+    --transition_speed_quick: 0.15s;
+    --transition_speed_fast: 0.3s;
+    --transition_speed_mid: 0.5s;
+    --transition_speed_slow: 1s;
+    --transition_speed_heavy: 3s;
+
+    --transition_timing_easeIn: ease-in;
+    --transition_timing_easeOut: ease-out;
+    --transition_timing_easeInOut: ease-in-out;
+    --transition_timing_linear: linear;
+    --transition_timing_elastic: linear(0 0%, 0.22 2.1%, 0.86 6.5%, 1.11 8.6%, 1.3 10.7%, 1.35 11.8%, 1.37 12.9%, 1.37 13.7%, 1.36 14.5%, 1.32 16.2%, 1.03 21.8%, 0.94 24%, 0.89 25.9%, 0.88 26.85%, 0.87 27.8%, 0.87 29.25%, 0.88 30.7%, 0.91 32.4%, 0.98 36.4%, 1.01 38.3%, 1.04 40.5%, 1.05 42.7%, 1.05 44.1%, 1.04 45.7%, 1 53.3%, 0.99 55.4%, 0.98 57.5%, 0.99 60.7%, 1 68.1%, 1.01 72.2%, 1 86.7%, 1 100%);
+    --transition_timing_bounce: linear(0 0%, 0 2.27%, 0.02 4.53%, 0.04 6.8%, 0.06 9.07%, 0.1 11.33%, 0.14 13.6%, 0.25 18.15%, 0.39 22.7%, 0.56 27.25%, 0.77 31.8%, 1 36.35%, 0.89 40.9%, 0.85 43.18%, 0.81 45.45%, 0.79 47.72%, 0.77 50%, 0.75 52.27%, 0.75 54.55%, 0.75 56.82%, 0.77 59.1%, 0.79 61.38%, 0.81 63.65%, 0.85 65.93%, 0.89 68.2%, 1 72.7%, 0.97 74.98%, 0.95 77.25%, 0.94 79.53%, 0.94 81.8%, 0.94 84.08%, 0.95 86.35%, 0.97 88.63%, 1 90.9%, 0.99 93.18%, 0.98 95.45%, 0.99 97.73%, 1 100%);
+}
+/* ▲ ======================== ↑ | CUSTOM VALUES | ↑ ======================== ▲ */
+
+/* ▼ ======================== ↓ | ZEROING DEFAULTS | ↓ ======================== ▼ */
+* {
+    box-sizing: border-box;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+    text-decoration: none;
+
+    &::selection {
+        background-color: var(--color_bg_bold);
+        color: var(--color_bg_light);
+    }
+
+    & input[type*="text"], input[type*="password"], input[type*="search"] {
+        opacity: 75%;
+        background-color: transparent;
+        transition: var(--transition_speed_mid) var(--transition_timing_easeIn);
+
+        &:focus {
+            opacity: 100%;
+            background-color: var(--color_bg_light);
+        }
+    }
+
+    /* GOOGLE JOSEFIN SANS */
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+/* ▲ ======================== ↑ | ZEROING DEFAULTS | ↑ ======================== ▲ */
+
+/* ▼ ======================== ↓ | TEMPLATES | ↓ ======================== ▼ */
+/* BUTTONS */
+.btn {
+    --color_text: var(--color_text_bold);
+    --color_bg: var(--color_bg_light);
+
+    width: fit-content;
+    height: fit-content;
+    color: var(--color_text);
+    border: 2px solid var(--color_text);
+    background-color: var(--color_bg);
+    border-radius: 0.5rem;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+        --color_text: var(--color_theme_light);
+        --color_bg: var(--color_text_bold);
+    }
+}
+.btn_primary {
+    position: relative;
+
+    &::after {
+        --angle: 0deg;
+        
+        z-index: -1;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        translate: -50% -50%;
+        border-radius: inherit;
+        width: 100%;
+        height: 100%;
+        background: conic-gradient(from var(--angle), transparent, #80e8f2, #6815e3);
+        padding: 0.3rem;
+        content: "";
+        animation: spinAngle var(--transition_speed_slow) var(--transition_timing_linear) 0s infinite;
+    }
+    &::before {
+        --angle: 0deg;
+    
+        z-index: -1;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        translate: -50% -50%;
+        border-radius: inherit;
+        width: 100%;
+        height: 100%;
+        background: conic-gradient(from var(--angle), transparent, #80e8f2, #6815e3);
+        padding: 0.3rem;
+        content: "";
+        animation: spinAngle var(--transition_speed_slow) var(--transition_timing_linear) 0s infinite;
+        filter: blur(10px);
+    }
+}
+.btn_open {
+    outline: none;
+    border: none;
+    background: transparent;
+}
+.btn_secondary {
+    opacity: 0.8;
+}
+.btn_small {
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0.45rem 0.65rem;
+}
+.btn_large {
+    font-size: 1rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    padding: 0.5rem 1rem;
+}
+
+/* CONTAINER */
+.container_full {
+    width: var(--width_section_full);
+}
+.container_center {
+    width: var(--width_section_center);
+    margin: var(--margin_center);
+}
+
+/* DISPLAY FLEX */
+.fcc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fec {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.fbc {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* HIDDEN */
+.hidden {
+    display: none;
+}
+/* ▲ ======================== ↑ | TEMPLATES | ↑ ======================== ▲ */
+
+/* ▼ ======================== ↓ | CUSTOM FONTS | ↓ ======================== ▼ */
+/* MONOSPACE */
+.monospace {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* GOOGLE FONTS | BITCOUNT */
+.bitcount-grid-single-400 {
+  font-family: "Bitcount Grid Single", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0,
+    "CRSV" 0.5,
+    "ELSH" 0,
+    "ELXP" 0;
+}
+/* ▲ ======================== ↑ | CUSTOM FONTS | ↑ ======================== ▲ */
+
+/* ▼ ======================== ↓ | ANIMATIONS | ↓ ======================== ▼ */
+@keyframes spinAngle {
+    0% {
+        --angle: 0deg;
+    }
+    100% {
+        --angle: 360deg;
+    }
+}
+/* ▲ ======================== ↑ | ANIMATIONS | ↑ ======================== ▲ */
+
+/* ▼ ======================== ↓ | PROPERTIES | ↓ ======================== ▼ */
+@property --angle {
+    syntax: "<angle>";
+    inherits: false;
+    initial-value: 0deg;
+}
+/* ▲ ======================== ↑ | PROPERTIES | ↑ ======================== ▲ */

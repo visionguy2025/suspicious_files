@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- META DATA -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- TITLE OF THE PAGE -->
+        <title>Code Royale | Home</title>
+
+        <!-- TAB ICON OF THE PAGE -->
+        <link rel="shortcut icon" href="./static/logo/logo.png" type="image/x-icon">
+
+        <!-- FONT AWESOME CDN V7.0.1 -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+        <!-- GOOGLE FONTS CDN | JOSEFIN SANS, BITCOUNT -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Single:wght@100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+
+        <!-- CUSTOM STYLE SHEETS -->
+        <link rel="stylesheet" href="./static/css/styles.css">
+        <link rel="stylesheet" href="./static/css/global.css">
+
+        <!-- RESPONSIVE DESIGN LAYOUT -->
+        <link rel="stylesheet" media="(max-width: 1280px)" href="./static/css/styles_laptop.css">
+        <link rel="stylesheet" media="(max-width: 991px)" href="./static/css/styles_tablet.css">
+        <link rel="stylesheet" media="(max-width: 575px)" href="./static/css/styles_mobile.css">
+        <link rel="stylesheet" media="(max-width: 360px)" href="./static/css/styles_extrasmall.css">
+    </head>
+    <body>
+        <!-- START ===================== | MISC | ===================== START -->
+        <!-- . -->
+        <!-- <div class="rightAsideGuide"></div> -->
+
+        <!-- . -->
+        <!-- <div class="toTopBtn"></div> -->
+        <!--  END  ===================== | MISC | =====================  END  -->
+        
+        <!-- START ===================== | HEADER | ===================== START -->
+        <div class="header container_full" id="header">
+            <!-- TOP SIDE -->
+            <section class="headerTop container_center fbc">
+                <!-- MODAL BUTTONS -->
+                <div class="headerTop__buttons">
+                    <button class="btn btn_open btn_small">privacy policy</button>
+                    <button class="btn btn_open btn_small">terms & conditions</button>
+
+                    <div class="modal" id="privacy">
+                        .
+                    </div>
+                    <div class="modal" id="terms">
+                        .
+                    </div>
+                </div>
+
+                <!-- SEARCHBAR -->
+                <div class="headerTop__search">
+                    <input type="search" name="search" id="searchbar" placeholder="Search">
+                    <button type="submit" class="btn">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </div>
+
+                <!-- SOCIAL MEDIA -->
+                <div class="headerTop__social">
+                    <a href="https://youtube.com" class="fcc btn">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                    <a href="https://x.com" class="fcc btn">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                    <a href="https://instagram.com" class="fcc btn">
+                        <i class="fa-brands fa-square-instagram"></i>
+                    </a>
+                    <a href="https://github.com" class="fcc btn">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://discord.com" class="fcc btn">
+                        <i class="fa-brands fa-discord"></i>
+                    </a>
+                    <a href="https://artstation.com" class="fcc btn">
+                        <i class="fa-brands fa-artstation"></i>
+                    </a>
+                </div>
+            </section>
+
+            <!-- MAIN BOTTOM SIDE -->
+            <section class="headerBottom container_center fbc">
+                <!-- LOGO -->
+                <a href="#" class="headerBottom__logo">
+                    <img src="./static/logo/logo.png" alt="logo">
+                </a>
+
+                <!-- NAVBAR -->
+                <nav class="headerBottom__navbar">
+                    <li class="fcc">
+                        <a href="#">
+                            <i class="fa-solid fa-circle-info"></i>
+                            <span>about</span>
+                        </a>
+                    </li>
+                    <li class="fcc" id="menu__blog">
+                        <a href="#">
+                            <i class="fa-solid fa-folder-open"></i>
+                            <span>blog</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </a>
+
+                        <div id="dropdown__blog"></div>
+                    </li>
+                    <li class="fcc">
+                        <a href="#">
+                            <i class="fa-solid fa-laptop-code"></i>
+                            <span>career</span>
+                        </a>
+                    </li>
+                    <li class="fcc" id="menu__community">
+                        <a href="#">
+                            <i class="fa-solid fa-comment"></i>
+                            <span>community</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </a>
+
+                        <div id="dropdown__community"></div>
+                    </li>
+                    <li class="fcc">
+                        <a href="#">
+                            <i class="fa-solid fa-street-view"></i>
+                            <span>contact</span>
+                        </a>
+                    </li>
+                    <li class="fcc">
+                        <a href="#">
+                            <i class="fa-solid fa-bell"></i>
+                            <span>news</span>
+                        </a>
+                    </li>
+                    <li class="fcc" id="menu__projects">
+                        <a href="#">
+                            <i class="fa-solid fa-flask"></i>
+                            <span>projects</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </a>
+
+                        <div id="dropdown__projects"></div>
+                    </li>
+                </nav>
+
+                <!-- PROFILE -->
+                <div class="headerBottom__profile">
+                    <div class="headerBottom__profile_guest">
+                        <a href="#" class="btn btn_open btn_small">sign in</a>
+                        /
+                        <a href="#" class="btn btn_open btn_small">register</a>
+                    </div>
+                    <div class="headerBottom__profile_user">
+                        <a href="#" class="btn btn_open">
+                            <div>
+                                <img src="./static/profiles/profile_01.png" alt="profile">
+                            </div>
+                            <span>FIRSTNAME LASTNAME</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!--  END  ===================== | HEADER | =====================  END  -->
+
+        <!-- START ===================== | MAIN | ===================== START -->
+        <div class="home_main container_full" id="home_main">
+            <!-- SECTION #1 HERO -->
+            <section class="container_center" id="home_main_hero"></section>
+
+            <!-- SECTION #1 UNTITLED -->
+            <section class="container_center" id="home_main_untitled"></section>
+        </div>
+        <!--  END  ===================== | MAIN | =====================  END  -->
+
+        <!-- START ===================== | FOOTER | ===================== START -->
+        <div class="footer" id="footer">
+            <!-- TOP SIDE -->
+            <section class="footerTop"></section>
+
+            <!-- BOTTOM SIDE -->
+            <section class="footerBottom"></section>
+        </div>
+        <!--  END  ===================== | FOOTER | =====================  END  -->
+
+        <!-- START ===================== | IMPORT SCRIPTS | ===================== START -->
+        <!-- COMPONENTS -->
+        <script src="./components/Header.js"></script>
+        <script src="./components/Footer.js"></script>
+
+        <!-- FEATURES -->
+        <script src="./features/untitled.js"></script>
+        <!--  END  ===================== | IMPORT SCRIPTS | =====================  END  -->
+
+        <!-- START ===================== | PAGE SCRIPTS | ===================== START -->
+        <script>
+            // INITIAL CALLS
+            // headContents();
+            // HEADER
+
+            // EVENT FEATURES
+            // .
+        </script>
+        <!--  END  ===================== | PAGE SCRIPTS | =====================  END  -->
+    </body>
+</html>

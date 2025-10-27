@@ -1,0 +1,28 @@
+[
+    {
+        "id": 0,
+        "first_name": "Lorem",
+        "last_name": "Ipsum",
+        "date_of_birth": "1990-10-30",
+        "email": "loremipsum1990@gmail.com",
+        "password": "dontStealMyAccount321",
+        "phone_number_prefix": "+994",
+        "phone_numer": "050-123-45-67",
+        "blogs": [0,5,49],
+        "rates": [2,6,50,99],
+        "comments": [2,50]
+    },
+    {
+        "id": 1,
+        "first_name": "Walter",
+        "last_name": "White",
+        "date_of_birth": "1958-09-7",
+        "email": "heisenbergofficial25@gmail.com",
+        "password": "weCooktheBest123",
+        "phone_number_prefix": "+1",
+        "phone_numer": "215-456-7890",
+        "blogs": [2,3,4],
+        "rates": [],
+        "comments": [99]
+    }
+]
